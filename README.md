@@ -81,16 +81,37 @@ Visual Analysis Results
  
 <img width="1102" alt="Screenshot 2024-05-07 at 12 05 43 AM" src="https://github.com/Ohmae22/Week_11_practical_application_assignment/assets/88304497/be55a8e0-fa57-49da-8ce7-cfdc68783445">
 
-## Observation:
-- Odometer & Car Age: They have small weights in the first few PCs, which means they are not the most defining features in the dataset when it comes to price variance.
-- Manufacturer: Certain manufacturers like 'Unknown', 'Acura', and 'Alfa-Romeo' have higher weighted loadings in some PCs, suggesting that they have a significant impact on how the cars are grouped by price variance.
-- Type of Car: Features like 'coupe', 'hatchback', and 'pickup' have more considerable weight in some PCs, indicating these vehicle types are influential in the variance captured by those PCs. For instance, PC1 heavily weighs 'other', 'pickup', and 'hatchback', suggesting that these types of cars might have a distinct pattern in pricing compared to other types.
+## Key Findings
 
+- From PCA:
+    - PCA provided a high-level overview of the data, emphasizing groups of features such as car type and make that drive price variance.
+- From Lasso Regression:
+    - Brand Value: Premium brands like Tesla and Porsche are strongly associated with higher prices.
+    - Fuel Efficiency: Diesel engines are favored in the used car market, possibly for their longevity and fuel efficiency.
+    - Type Appeal: Pickups show a strong positive price association, indicating a higher market value. Conversely, the SUV category may be oversaturated, as suggested by its negative coefficient.
+    - Age and Mileage: As expected, higher mileage and older vehicles are associated with lower prices.
+    - Transmission: There is a slight preference for manual transmission over automatic in the used car market.
 
-## What This Means for the Dealership:
-- Diverse Inventory: Since different PCs capture different features, it implies the used car market values a diverse range of features. The dealership should maintain a varied inventory to appeal to different consumer preferences.
-- Focus on Car Type and Make: Car types like pickups, hatchbacks, and manufacturers might have distinct price points that can be targeted. If pickups have a high weight in PC1, which captures the most variance, it might be indicative of a niche with specific pricing dynamics.
-- Pricing Strategy: The dealership might consider their pricing strategy for different car types and makes/models based on the weighted loadings. For instance, if the 'sedan' type has a strong negative weight in a principal component that captures a lot of variance, it might suggest that sedans are varied in price, and there could be an opportunity to compete on price.
+## Recommendations
+
+- Based on the findings, we recommend the following actions:
+
+    - Inventory Acquisition:
+        - Prioritize stocking vehicles from high-value brands, especially Tesla and Porsche.
+        - Include a good selection of diesel-powered vehicles, notably in the pickup category.
+
+    - Pricing Strategy:
+        - Price vehicles with higher mileage and older age models more competitively.
+        - Take brand value into account when pricing, as premium brands can command higher prices.
+
+    - Marketing Considerations:
+        - Highlight the advantages of diesel vehicles and their associated brands in marketing campaigns.
+        - Promote the utility and functionality of pickups, which are shown to be highly valued in the market.
+
+    - Future Strategy:
+        - Regularly revisit and update the analytical model with new data to ensure that the inventory strategy adapts to current market trends.
+        - Consider creating a dynamic pricing model that can adjust to real-time market conditions and inventory levels.
 
 ## Concluding Thoughts
 - The insights derived from the Lasso regression provide a robust foundation for strategic decision-making. By aligning inventory and pricing strategies with these data-driven insights, dealership can better meet market demand and improve sales outcomes.
+
